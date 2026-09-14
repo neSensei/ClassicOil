@@ -16,7 +16,7 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
     : ARCHIVE_ENTRIES.filter(e => e.category === selectedCategory);
 
   return (
-    <section id="archive" className="py-14 sm:py-24 md:py-32 parchment-secondary border-b border-[#806345]/20">
+    <section id="archive" className="py-14 sm:py-24 md:py-32 bg-[#E8E5D2] border-b border-[#806345]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Header Block */}

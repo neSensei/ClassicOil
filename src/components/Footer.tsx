@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="parchment-secondary border-t border-[#806345]/30 py-12 sm:py-20 px-3 sm:px-8 paper-grain relative">
+    <footer className="bg-[#E8E5D2] border-t border-[#806345]/30 py-12 sm:py-20 px-3 sm:px-8 paper-grain relative">
       <div className="max-w-4xl mx-auto border border-[#806345]/40 p-5 sm:p-10 md:p-14 bg-[#E8E5D2] relative">
         
         {/* Archival Label Corner Notches */}

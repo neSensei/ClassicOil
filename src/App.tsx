@@ -43,7 +43,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen parchment-canvas text-[#382517] paper-fibers selection:bg-[#57391F] selection:text-[#E8E5D2]">
+    <div className="relative min-h-screen bg-[#E8E5D2] text-[#382517] paper-fibers selection:bg-[#57391F] selection:text-[#E8E5D2]">
       
       {/* Restrained Navigation with mobile drawer */}
       <Navbar activeSection={activeSection} />

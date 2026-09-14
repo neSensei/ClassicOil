@@ -13,7 +13,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
   const p4 = PRODUCTS[3];
 
   return (
-    <section id="collection" className="py-14 sm:py-24 md:py-28 parchment-secondary border-t border-b border-[#806345]/25">
+    <section id="collection" className="py-14 sm:py-24 md:py-28 bg-[#E8E5D2] border-t border-b border-[#806345]/25">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
 
         {/* Section Masthead */}
