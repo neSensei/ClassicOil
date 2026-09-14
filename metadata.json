@@ -1,0 +1,6 @@
+{
+  "name": "Classic Oil",
+  "description": "Официальная презентация бренда Classic Oil: российский производитель жидкостей для очистки картриджей ЭСДН. Лабораторные стандарты ISO 7, фармакопейное сырьё USP/EP, коллекция формул и контроль «Честный Знак».",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

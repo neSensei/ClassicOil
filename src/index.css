@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-antique-ivory: #E8E5D2;
+  --color-warm-paper: #DDD8C2;
+  --color-old-parchment: #C9C0A5;
+  --color-dark-brown-ink: #57391F;
+  --color-deep-brown: #382517;
+  --color-faded-brown: #806345;
+  --color-muted-beige: #A99A78;
+
+  --font-display: "Playfair Display", "Bodoni Moda", "Times New Roman", serif;
+  --font-editorial: "Cormorant Garamond", "Old Standard TT", Garamond, Georgia, serif;
+  --font-titling: "Old Standard TT", "Playfair Display", "Bodoni Moda", serif;
+  --font-italian: "Cormorant Garamond", "Bodoni Moda", serif;
+  --font-archive: "Courier Prime", monospace;
+}
+
+/* Paper Materiality Grain */
+.paper-grain {
+  background-color: #E8E5D2;
+  background-image: 
+    radial-gradient(rgba(87, 57, 31, 0.035) 1px, transparent 0),
+    radial-gradient(rgba(56, 37, 23, 0.025) 1px, transparent 0);
+  background-size: 24px 24px, 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.paper-fibers {
+  position: relative;
+}
+
+.paper-fibers::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Letterpress & Traditional Ink Effect */
+.ink-letterpress {
+  color: #57391F;
+  text-shadow: 0 1px 0 rgba(232, 229, 210, 0.5), 0 -0.5px 0 rgba(56, 37, 23, 0.15);
+}
+
+.ink-deep {
+  color: #382517;
+}
+
+.ink-faded {
+  color: #806345;
+}
+
+/* Double fine border rule common in 1940s-1960s labels */
+.archival-double-border {
+  border: 1px solid #806345;
+  position: relative;
+}
+.archival-double-border::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(128, 99, 69, 0.4);
+  pointer-events: none;
+}
+
+/* Archival Ornamental Rules */
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: rgba(87, 57, 31, 0.3);
+}
+
+/* Drop caps for brand manifesto */
+.drop-cap::first-letter {
+  float: left;
+  font-family: "Bodoni Moda", serif;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: #57391F;
+}
+
+/* Custom scrollbar matching paper and ink */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #DDD8C2;
+}
+::-webkit-scrollbar-thumb {
+  background: #806345;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #57391F;
+}
