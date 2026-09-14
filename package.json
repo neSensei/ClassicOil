@@ -1,6 +1,7 @@
 {
   "name": "react-example",
   "private": true,
+  "homepage": "https://nesensei.github.io/ClassicOil",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
