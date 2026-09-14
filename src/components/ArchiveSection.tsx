@@ -16,41 +16,41 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
     : ARCHIVE_ENTRIES.filter(e => e.category === selectedCategory);
 
   return (
-    <section id="archive" className="py-24 sm:py-32 bg-[#DDD8C2]/50 border-b border-[#806345]/20">
+    <section id="archive" className="py-14 sm:py-24 md:py-32 parchment-secondary border-b border-[#806345]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Header Block */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#806345]/30 pb-8 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#806345]/30 pb-6 sm:pb-8 mb-8 sm:mb-12">
           <div>
-            <div className="text-[10px] tracking-[0.3em] text-[#806345] uppercase font-serif mb-2">
+            <div className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif mb-2">
               ТЕХНОЛОГИЧЕСКИЙ РЕГЛАМЕНТ · ЛАБОРАТОРНЫЙ СТАНДАРТ
             </div>
             <h2
-              className="text-4xl sm:text-6xl font-serif text-[#382517] tracking-[0.06em] uppercase"
+              className="text-3xl sm:text-5xl md:text-6xl font-serif text-[#382517] tracking-[0.06em] uppercase"
               style={{ fontFamily: '"Bodoni Moda", "Playfair Display", Georgia, serif' }}
             >
               ПРОИЗВОДСТВО
             </h2>
           </div>
 
-          <div className="mt-6 md:mt-0 max-w-md text-xs sm:text-sm text-[#57391F]/80 font-serif italic">
+          <div className="mt-4 md:mt-0 max-w-md text-xs sm:text-sm text-[#57391F]/80 font-serif italic leading-relaxed">
             Чистые помещения класса ISO 7, сырьё фармакопейной чистоты USP/EP, газохроматографический скрининг и государственная маркировка «Честный Знак».
           </div>
         </div>
 
-        {/* Category Filters (Restrained Editorial Style) */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-12">
-          <span className="text-[10px] tracking-[0.2em] text-[#806345] uppercase font-mono mr-2">
+        {/* Category Filters (Mobile-friendly horizontal scroll) */}
+        <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-12 pb-2">
+          <span className="hidden sm:inline-block text-[10px] tracking-[0.2em] text-[#806345] uppercase font-mono mr-2 whitespace-nowrap">
             РАЗДЕЛЫ СТАНДАРТА:
           </span>
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`text-xs tracking-[0.16em] font-serif uppercase px-3 py-1 transition-all ${
+              className={`whitespace-nowrap text-xs tracking-[0.14em] sm:tracking-[0.16em] font-serif uppercase px-3 sm:px-3.5 py-1.5 sm:py-1 transition-all min-h-[38px] flex items-center ${
                 selectedCategory === cat
                   ? 'bg-[#57391F] text-[#E8E5D2]'
-                  : 'bg-transparent text-[#806345] border border-[#806345]/30 hover:border-[#57391F] hover:text-[#382517]'
+                  : 'bg-[#E8E5D2]/60 text-[#806345] border border-[#806345]/30 hover:border-[#57391F] hover:text-[#382517]'
               }`}
             >
               {cat}
@@ -59,7 +59,7 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
         </div>
 
         {/* Asymmetric Editorial Masonry Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredEntries.map((entry, idx) => {
             // Asymmetric layout logic for masonry feel
             const isSpanned = idx === 0 || idx === 3;

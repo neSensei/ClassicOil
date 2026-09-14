@@ -18,11 +18,11 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#382517]/70 backdrop-blur-xs overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 bg-[#382517]/75 backdrop-blur-xs overflow-y-auto"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-3xl bg-[#E8E5D2] border-2 border-[#806345] p-6 sm:p-10 shadow-2xl my-8 paper-grain"
+        className="relative w-full max-w-3xl bg-[#E8E5D2] border-2 border-[#806345] p-4 sm:p-8 md:p-10 shadow-2xl my-auto max-h-[92vh] overflow-y-auto paper-grain"
         onClick={e => e.stopPropagation()}
       >
         {/* Archival Corner Frame Accents */}
@@ -35,7 +35,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
         <button
           id="close-modal-btn"
           onClick={onClose}
-          className="absolute top-4 right-4 text-xs tracking-[0.2em] font-serif uppercase text-[#806345] hover:text-[#382517] border border-[#806345]/40 px-3 py-1 bg-[#DDD8C2]/50 transition-colors"
+          className="sticky sm:absolute top-0 sm:top-4 right-0 sm:right-4 ml-auto block mb-3 sm:mb-0 text-xs tracking-[0.18em] sm:tracking-[0.2em] font-serif uppercase text-[#806345] hover:text-[#382517] border border-[#806345]/40 px-3.5 py-1.5 bg-[#DDD8C2] sm:bg-[#DDD8C2]/50 transition-colors min-h-[40px] z-10"
         >
           ЗАКРЫТЬ [✕]
         </button>
@@ -44,18 +44,18 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
         {product && (
           <div>
             {/* Header / Registry Block */}
-            <div className="border-b border-[#806345]/30 pb-4 mb-6">
-              <div className="flex items-center justify-between text-[10px] tracking-[0.3em] text-[#806345] font-mono uppercase mb-1">
+            <div className="border-b border-[#806345]/30 pb-3 sm:pb-4 mb-5 sm:mb-6">
+              <div className="flex items-center justify-between text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] font-mono uppercase mb-1">
                 <span>{product.plate}</span>
                 <span>{product.formulationYear}</span>
               </div>
               <h3
-                className="text-2xl sm:text-4xl font-serif text-[#382517] tracking-[0.05em] uppercase"
+                className="text-xl sm:text-3xl md:text-4xl font-serif text-[#382517] tracking-[0.04em] sm:tracking-[0.05em] uppercase leading-tight"
                 style={{ fontFamily: '"Bodoni Moda", serif' }}
               >
                 {product.name}
               </h3>
-              <p className="text-xs tracking-[0.24em] text-[#806345] uppercase font-serif mt-1">
+              <p className="text-[11px] sm:text-xs tracking-[0.2em] sm:tracking-[0.24em] text-[#806345] uppercase font-serif mt-1">
                 {product.classification}
               </p>
             </div>
