@@ -4,23 +4,31 @@ interface WordmarkProps {
   className?: string;
   size?: 'hero' | 'nav' | 'footer' | 'inline';
   subtitle?: boolean;
+  inverse?: boolean;
 }
 
 export const Wordmark: React.FC<WordmarkProps> = ({
   className = '',
   size = 'hero',
-  subtitle = false
+  subtitle = false,
+  inverse = false,
 }) => {
   if (size === 'nav') {
     return (
       <div className={`inline-flex flex-col items-start leading-none tracking-normal ${className}`}>
         <span
-          className="text-[#57391F] font-bold tracking-[0.12em] font-serif uppercase select-none transition-colors duration-300 hover:text-[#382517]"
+          className={`font-bold tracking-[0.12em] font-serif uppercase select-none transition-colors duration-300 ${
+            inverse
+              ? 'text-[#F5F3E9] hover:text-[#FFFFFF]'
+              : 'text-[#57391F] hover:text-[#382517]'
+          }`}
           style={{
             fontFamily: '"Bodoni Moda", "Cinzel", Georgia, serif',
-            fontSize: 'clamp(1.1rem, 3.8vw, 1.25rem)',
-            letterSpacing: '0.12em',
-            textShadow: '0 0.5px 0 rgba(232, 229, 210, 0.6)'
+            fontSize: 'clamp(1.15rem, 4vw, 1.35rem)',
+            letterSpacing: '0.14em',
+            textShadow: inverse
+              ? '0 1px 2px rgba(0, 0, 0, 0.5)'
+              : '0 0.5px 0 rgba(232, 229, 210, 0.6)'
           }}
         >
           CLASSIC OIL
