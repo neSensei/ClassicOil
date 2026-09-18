@@ -37,7 +37,7 @@ export interface ArchiveEntry {
   index: string;
   title: string;
   year: string;
-  category: "Чистая зона" | "Сырьё USP/EP" | "Флейвористика" | "Контроль GC/MS" | "Честный Знак" | "Флакон и дозатор" | string;
+  category: "Чистая зона" | "Сырьё USP/EP" | "Флейвористика" | "Контроль GC/MS" | "Флакон и дозатор" | string;
   dimension: string;
   description: string;
   image?: string;

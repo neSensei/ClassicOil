@@ -22,7 +22,7 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#806345]/30 pb-6 sm:pb-8 mb-8 sm:mb-12">
           <div>
-            <div className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif mb-2">
+            <div className="text-[10px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif mb-2">
               ПРИНЦИПЫ СОЗДАНИЯ И ТЕХНОЛОГИЯ
             </div>
             <h2
@@ -74,7 +74,7 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
               >
                 <div>
                   {/* Plate Header */}
-                  <div className="flex items-center justify-between border-b border-[#806345]/20 pb-2 mb-4 text-[9px] tracking-[0.25em] text-[#806345] font-mono uppercase">
+                  <div className="flex items-center justify-between border-b border-[#806345]/20 pb-2 mb-4 text-[10px] tracking-[0.25em] text-[#806345] font-mono uppercase">
                     <span>{entry.plateNumber}</span>
                     <span>{entry.year}</span>
                   </div>

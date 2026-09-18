@@ -39,14 +39,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         <a
           href="#hero"
           id="nav-brand-link"
-          className="group flex items-center no-underline focus:outline-none"
+          className="group flex items-center shrink-0 min-w-max no-underline focus:outline-none"
           onClick={() => setMobileMenuOpen(false)}
         >
           <Wordmark size="nav" inverse={true} />
         </a>
 
         {/* Desktop Navigation Links (Clear, distinct clickable button tabs) */}
-        <nav className="hidden md:flex items-center gap-2 lg:gap-3 text-xs tracking-[0.16em] lg:tracking-[0.18em] font-serif uppercase">
+        <nav className="hidden md:flex items-center shrink-0 gap-1.5 lg:gap-2.5 text-xs tracking-[0.16em] lg:tracking-[0.18em] font-serif uppercase">
           {navLinks.map(link => {
             const sectionKey = link.href.replace('#', '');
             const isActive = activeSection === sectionKey;
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     : 'bg-[#22150D]/90 border-[#806345]/50 text-[#DDD8C2] hover:bg-[#57391F] hover:text-[#FFFFFF] hover:border-[#E8E5D2]/70'
                 }`}
               >
-                <span className={`text-[9px] font-mono ${isActive ? 'text-[#E8E5D2]' : 'text-[#806345]'}`}>{link.num}</span>
+                <span className={`text-[10px] font-mono ${isActive ? 'text-[#E8E5D2]' : 'text-[#806345]'}`}>{link.num}</span>
                 <span>{link.label}</span>
               </a>
             );
@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         </nav>
 
         {/* Desktop 18+ Badge */}
-        <div className="hidden lg:flex items-center gap-2 text-[9.5px] tracking-[0.2em] text-[#DDD8C2] font-mono border border-[#806345]/60 bg-[#22150D] px-3 py-1">
+        <div className="hidden lg:flex items-center gap-2 text-[10px] tracking-[0.2em] text-[#DDD8C2] font-mono border border-[#806345]/60 bg-[#22150D] px-3 py-1">
           <span className="font-bold text-[#F5F3E9]">18+</span>
           <span className="text-[#DDD8C2]/70">ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</span>
         </div>
@@ -95,7 +95,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           id="mobile-nav-menu"
           className="md:hidden border-t border-[#806345]/40 bg-[#2E1E14] px-5 py-6 space-y-4 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200"
         >
-          <div className="flex items-center justify-between text-[9px] tracking-[0.25em] text-[#DDD8C2]/60 font-mono uppercase border-b border-[#806345]/30 pb-2 mb-3">
+          <div className="flex items-center justify-between text-[10px] tracking-[0.25em] text-[#DDD8C2]/60 font-mono uppercase border-b border-[#806345]/30 pb-2 mb-3">
             <span>РЕЕСТР РАЗДЕЛОВ</span>
             <span className="text-[#DDD8C2]/80">CLASSIC OIL</span>
           </div>
@@ -125,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             })}
           </nav>
 
-          <div className="pt-4 border-t border-[#806345]/30 flex items-center justify-between text-[9px] tracking-[0.18em] text-[#DDD8C2]/70 font-mono uppercase">
+          <div className="pt-4 border-t border-[#806345]/30 flex items-center justify-between text-[10px] tracking-[0.18em] text-[#DDD8C2]/70 font-mono uppercase">
             <span className="font-bold text-[#F5F3E9]">18+ ТОЛЬКО</span>
             <span>ДЛЯ СОВЕРШЕННОЛЕТНИХ</span>
           </div>

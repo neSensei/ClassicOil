@@ -70,7 +70,7 @@ export const InquiriesSection: React.FC = () => {
         
         {/* Archival Dispatch Masthead */}
         <div className="text-center mb-10 sm:mb-16">
-          <span className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif block mb-2">
+          <span className="text-[10px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif block mb-2">
             ОФИЦИАЛЬНАЯ КОРРЕСПОНДЕНЦИЯ · ОПТ И СОТРУДНИЧЕСТВО
           </span>
           <h2
@@ -89,7 +89,7 @@ export const InquiriesSection: React.FC = () => {
         <div className="border border-[#806345]/40 p-4 sm:p-8 md:p-10 bg-[#DDD8C2]/40 relative shadow-xs">
           
           {/* Subtle Ledger Header */}
-          <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center border-b border-[#806345]/25 pb-3 sm:pb-4 mb-6 sm:mb-8 text-[8.5px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-[#806345] font-mono uppercase gap-1">
+          <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center border-b border-[#806345]/25 pb-3 sm:pb-4 mb-6 sm:mb-8 text-[10px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-[#806345] font-mono uppercase gap-1">
             <span>БЛАНК ВЗАИМОДЕЙСТВИЯ № 24-B2B</span>
             <span>ОТДЕЛ ОПТОВЫХ ПРОДАЖ CLASSIC OIL</span>
           </div>
@@ -135,7 +135,7 @@ export const InquiriesSection: React.FC = () => {
                 <div>
                   <label
                     htmlFor="correspondent-name"
-                    className="block text-[9.5px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
+                    className="block text-[10px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
                   >
                     ИМЯ ПРЕДСТАВИТЕЛЯ *
                   </label>
@@ -154,7 +154,7 @@ export const InquiriesSection: React.FC = () => {
                 <div>
                   <label
                     htmlFor="institution-name"
-                    className="block text-[9.5px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
+                    className="block text-[10px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
                   >
                     НАЗВАНИЕ СЕТИ / ВЕЙП-ШОПА / ОРГАНИЗАЦИИ
                   </label>
@@ -172,7 +172,7 @@ export const InquiriesSection: React.FC = () => {
                 <div>
                   <label
                     htmlFor="correspondent-email"
-                    className="block text-[9.5px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
+                    className="block text-[10px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
                   >
                     EMAIL ИЛИ TELEGRAM ДЛЯ СВЯЗИ *
                   </label>
@@ -191,7 +191,7 @@ export const InquiriesSection: React.FC = () => {
                 <div>
                   <label
                     htmlFor="inquiry-matter"
-                    className="block text-[9.5px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
+                    className="block text-[10px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
                   >
                     ФОРМАТ СОТРУДНИЧЕСТВА
                   </label>
@@ -214,7 +214,7 @@ export const InquiriesSection: React.FC = () => {
               <div>
                 <label
                   htmlFor="dispatch-notes"
-                  className="block text-[9.5px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
+                  className="block text-[10px] sm:text-[10px] tracking-[0.18em] text-[#806345] uppercase mb-1 font-serif"
                 >
                   КОММЕНТАРИЙ / ГОРОД / КОЛИЧЕСТВО ТОЧЕК
                 </label>

@@ -147,3 +147,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #57391F;
 }
+
+
+/* Hero wordmark viewport-centering safeguard */
+#hero-wordmark { text-align: center; }

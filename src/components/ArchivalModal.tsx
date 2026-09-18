@@ -46,7 +46,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
           <div>
             {/* Header / Registry Block */}
             <div className="border-b border-[#806345]/30 pb-3 sm:pb-4 mb-5 sm:mb-6">
-              <div className="flex items-center justify-between text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] font-mono uppercase mb-1">
+              <div className="flex items-center justify-between text-[10px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] font-mono uppercase mb-1">
                 <span>{product.plate}</span>
                 <span>{product.formulationYear}</span>
               </div>
@@ -70,7 +70,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
                   referrerPolicy="no-referrer"
                   className="w-full h-auto object-cover grayscale-[10%]"
                 />
-                <div className="mt-2 text-center text-[9px] tracking-[0.2em] text-[#806345] font-serif uppercase">
+                <div className="mt-2 text-center text-[10px] tracking-[0.2em] text-[#806345] font-serif uppercase">
                   {product.vessel}
                 </div>
               </div>
@@ -145,7 +145,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-[11px] bg-[#DDD8C2]/30 p-3 border border-[#806345]/20">
                 {product.specifications.map((spec, i) => (
                   <div key={i}>
-                    <span className="block text-[9px] text-[#806345] uppercase tracking-wider">
+                    <span className="block text-[10px] text-[#806345] uppercase tracking-wider">
                       {spec.label}
                     </span>
                     <span className="text-[#382517] font-medium">{spec.value}</span>

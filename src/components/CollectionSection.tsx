@@ -18,7 +18,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
 
         {/* Section Masthead */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-24">
-          <span className="text-[9px] sm:text-[10px] tracking-[0.26em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif block">
+          <span className="text-[10px] sm:text-[10px] tracking-[0.26em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif block">
             СПЕЦИАЛИЗИРОВАННЫЕ СОСТАВЫ · СЕРИЯ CLEANSE
           </span>
           <h2
@@ -47,14 +47,14 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
                   className="w-full h-full object-cover grayscale-[15%] contrast-[1.05] group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 />
               </div>
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-[8px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/85 px-2.5 py-1 font-mono uppercase backdrop-blur-xs">
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-[10px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/85 px-2.5 py-1 font-mono uppercase backdrop-blur-xs">
                 {p1.plate}
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-5 flex flex-col justify-center lg:pl-4">
-            <div className="text-[9px] sm:text-[10px] tracking-[0.26em] text-[#806345] font-serif uppercase mb-1">
+            <div className="text-[10px] sm:text-[10px] tracking-[0.26em] text-[#806345] font-serif uppercase mb-1">
               {p1.number}
             </div>
             <div className="text-[10px] sm:text-xs tracking-[0.2em] text-[#806345]/70 font-mono mb-1">
@@ -81,7 +81,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
 
             {/* Taste Balance Bars */}
             <div className="bg-[#DDD8C2]/50 border border-[#806345]/20 p-3 sm:p-3.5 mb-5 sm:mb-6 text-xs font-serif space-y-2">
-              <div className="text-[8.5px] sm:text-[9px] uppercase tracking-[0.2em] text-[#806345] font-mono border-b border-[#806345]/20 pb-1 mb-2">
+              <div className="text-[10px] sm:text-[10px] uppercase tracking-[0.2em] text-[#806345] font-mono border-b border-[#806345]/20 pb-1 mb-2">
                 ПРОФИЛЬ ВКУСА / КАЛИБРОВКА LAB
               </div>
               <div className="flex items-center justify-between text-[11px] text-[#57391F]">
@@ -114,15 +114,15 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
             <div className="border-t border-b border-[#806345]/25 py-3.5 mb-6 text-xs font-serif">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[#57391F]">
                 <div>
-                  <span className="text-[#806345] block text-[9px] uppercase tracking-[0.18em]">ФЛАКОН И ОБЪЁМ</span>
+                  <span className="text-[#806345] block text-[10px] uppercase tracking-[0.18em]">ФЛАКОН И ОБЪЁМ</span>
                   <span>30 МЛ / Chubby Gorilla V3</span>
                 </div>
                 <div>
-                  <span className="text-[#806345] block text-[9px] uppercase tracking-[0.18em]">НАЗНАЧЕНИЕ / БАЗА</span>
+                  <span className="text-[#806345] block text-[10px] uppercase tracking-[0.18em]">НАЗНАЧЕНИЕ / БАЗА</span>
                   <span>Очистка картриджей ЭСДН · 50/50</span>
                 </div>
                 <div className="sm:col-span-2 pt-1">
-                  <span className="text-[#806345] block text-[9px] uppercase tracking-[0.18em]">ВЕРХНИЕ И БАЗОВЫЕ НОТЫ</span>
+                  <span className="text-[#806345] block text-[10px] uppercase tracking-[0.18em]">ВЕРХНИЕ И БАЗОВЫЕ НОТЫ</span>
                   <span className="italic text-xs">{p1.tasteProfile.topNotes} → {p1.tasteProfile.baseNotes}</span>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-center mb-16 sm:mb-28 md:mb-36">
           <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center lg:pr-4">
-            <div className="text-[9px] sm:text-[10px] tracking-[0.26em] text-[#806345] font-serif uppercase mb-1">
+            <div className="text-[10px] sm:text-[10px] tracking-[0.26em] text-[#806345] font-serif uppercase mb-1">
               {p2.number}
             </div>
             <div className="text-[10px] sm:text-xs tracking-[0.2em] text-[#806345]/70 font-mono mb-1">
@@ -172,7 +172,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
 
             {/* Taste Balance Bars */}
             <div className="bg-[#DDD8C2]/50 border border-[#806345]/20 p-3 sm:p-3.5 mb-5 sm:mb-6 text-xs font-serif space-y-2">
-              <div className="text-[8.5px] sm:text-[9px] uppercase tracking-[0.2em] text-[#806345] font-mono border-b border-[#806345]/20 pb-1 mb-2">
+              <div className="text-[10px] sm:text-[10px] uppercase tracking-[0.2em] text-[#806345] font-mono border-b border-[#806345]/20 pb-1 mb-2">
                 ПРОФИЛЬ ВКУСА / КАЛИБРОВКА LAB
               </div>
               <div className="flex items-center justify-between text-[11px] text-[#57391F]">
@@ -205,15 +205,15 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
             <div className="border-t border-b border-[#806345]/25 py-3.5 mb-6 text-xs font-serif">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[#57391F]">
                 <div>
-                  <span className="text-[#806345] block text-[9px] uppercase tracking-[0.18em]">НАЗНАЧЕНИЕ</span>
+                  <span className="text-[#806345] block text-[10px] uppercase tracking-[0.18em]">НАЗНАЧЕНИЕ</span>
                   <span>Очистка картриджей ЭСДН</span>
                 </div>
                 <div>
-                  <span className="text-[#806345] block text-[9px] uppercase tracking-[0.18em]">РЕЗУЛЬТАТ</span>
+                  <span className="text-[#806345] block text-[10px] uppercase tracking-[0.18em]">РЕЗУЛЬТАТ</span>
                   <span>Удаление нагара и смол</span>
                 </div>
                 <div className="sm:col-span-2 pt-1">
-                  <span className="text-[#806345] block text-[9px] uppercase tracking-[0.18em]">ОСНОВНЫЕ АКЦЕНТЫ</span>
+                  <span className="text-[#806345] block text-[10px] uppercase tracking-[0.18em]">ОСНОВНЫЕ АКЦЕНТЫ</span>
                   <span className="italic text-xs">{p2.tasteProfile.topNotes} → {p2.tasteProfile.heartNotes}</span>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
                   className="w-full h-full object-cover grayscale-[15%] contrast-[1.05] group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 />
               </div>
-              <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 text-[8px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/85 px-2.5 py-1 font-mono uppercase backdrop-blur-xs">
+              <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 text-[10px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/85 px-2.5 py-1 font-mono uppercase backdrop-blur-xs">
                 {p2.plate}
               </div>
             </div>
@@ -260,16 +260,16 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
                 className="w-full h-full object-cover grayscale-[12%] contrast-[1.08] hover:scale-[1.01] transition-transform duration-1000"
               />
             </div>
-            <div className="absolute top-4 sm:top-8 left-4 sm:left-8 text-[8px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#E8E5D2] bg-[#382517]/90 px-2.5 sm:px-3 py-1 font-mono uppercase backdrop-blur-xs">
+            <div className="absolute top-4 sm:top-8 left-4 sm:left-8 text-[10px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#E8E5D2] bg-[#382517]/90 px-2.5 sm:px-3 py-1 font-mono uppercase backdrop-blur-xs">
               {p3.plate}
             </div>
-            <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 hidden sm:block text-[8px] sm:text-[9px] tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/90 px-3 py-1 font-serif uppercase backdrop-blur-xs">
+            <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 hidden sm:block text-[10px] sm:text-[10px] tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/90 px-3 py-1 font-serif uppercase backdrop-blur-xs">
               СЕРИЯ CLEANSE & REFRESH · 30 МЛ
             </div>
           </div>
 
           <div className="max-w-2xl mx-auto text-center px-2 sm:px-4">
-            <div className="text-[9px] sm:text-[10px] tracking-[0.26em] sm:tracking-[0.32em] text-[#806345] font-serif uppercase mb-2">
+            <div className="text-[10px] sm:text-[10px] tracking-[0.26em] sm:tracking-[0.32em] text-[#806345] font-serif uppercase mb-2">
               {p3.number} · CLASSIC OIL CLEANING LAB
             </div>
             <h3
@@ -309,14 +309,14 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
                   className="w-full h-full object-cover grayscale-[12%] contrast-[1.05]"
                 />
               </div>
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-[8px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/85 px-2.5 py-1 font-mono uppercase">
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-[10px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-[#E8E5D2] bg-[#382517]/85 px-2.5 py-1 font-mono uppercase">
                 {p4.plate}
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="text-[9px] sm:text-[10px] tracking-[0.26em] text-[#806345] font-serif uppercase mb-1">
+            <div className="text-[10px] sm:text-[10px] tracking-[0.26em] text-[#806345] font-serif uppercase mb-1">
               {p4.number} · РЕЦЕПТУРА HERBAL PURIFY
             </div>
             <h3
@@ -336,14 +336,14 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
 
             {/* Spec Card */}
             <div className="border border-dashed border-[#806345]/40 p-3.5 sm:p-4 bg-[#E8E5D2]/60 mb-6 sm:mb-8 font-mono text-[11px] text-[#57391F]">
-              <div className="flex justify-between border-b border-[#806345]/20 pb-1.5 mb-2 text-[#806345] text-[8.5px] sm:text-[9px] tracking-[0.18em] uppercase font-serif">
+              <div className="flex justify-between border-b border-[#806345]/20 pb-1.5 mb-2 text-[#806345] text-[10px] sm:text-[10px] tracking-[0.18em] uppercase font-serif">
                 <span>СПЕЦИФИКАЦИЯ ФОРМУЛЫ</span>
                 <span>СЕРИЯ № 024-TEA</span>
               </div>
               <p className="italic font-serif text-xs text-[#57391F]/90 mb-2">
                 "Мягкая композиция для промывки картриджей ЭСДН. Растворяет нагар, продлевая ресурс хлопкового фитиля и сетки испарителя."
               </p>
-              <div className="flex flex-col xs:flex-row justify-between text-[9.5px] sm:text-[10px] text-[#806345] gap-1">
+              <div className="flex flex-col xs:flex-row justify-between text-[10px] sm:text-[10px] text-[#806345] gap-1">
                 <span>ФЛАКОН: 30 МЛ · CHUBBY GORILLA V3</span>
                 <span>БАЗА: 50 PG / 50 VG · 18+</span>
               </div>

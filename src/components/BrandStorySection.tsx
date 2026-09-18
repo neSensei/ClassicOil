@@ -11,7 +11,7 @@ export const BrandStorySection: React.FC = () => {
         
         {/* Editorial Masthead */}
         <div className="border-b border-t border-[#806345]/30 py-6 mb-16 text-center">
-          <div className="flex flex-col sm:flex-row items-center justify-between text-[9px] sm:text-[10px] tracking-[0.25em] text-[#806345] uppercase font-serif pb-3 border-b border-[#806345]/15 gap-2">
+          <div className="flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[10px] tracking-[0.25em] text-[#806345] uppercase font-serif pb-3 border-b border-[#806345]/15 gap-2">
             <span>О БРЕНДЕ · ИСТОРИЯ</span>
             <span>СОСТАВ И БАЗА</span>
             <span>CLASSIC OIL</span>
