@@ -35,9 +35,10 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
         <button
           id="close-modal-btn"
           onClick={onClose}
-          className="sticky sm:absolute top-0 sm:top-4 right-0 sm:right-4 ml-auto block mb-3 sm:mb-0 text-xs tracking-[0.18em] sm:tracking-[0.2em] font-serif uppercase text-[#806345] hover:text-[#382517] border border-[#806345]/40 px-3.5 py-1.5 bg-[#DDD8C2] sm:bg-[#DDD8C2]/50 transition-colors min-h-[40px] z-10"
+          className="cursor-pointer sticky sm:absolute top-0 sm:top-4 right-0 sm:right-4 ml-auto flex items-center gap-1.5 mb-3 sm:mb-0 text-xs tracking-[0.18em] sm:tracking-[0.2em] font-serif uppercase text-[#F5F3E9] hover:bg-[#382517] bg-[#57391F] border border-[#382517] px-4 py-2 shadow transition-all min-h-[42px] z-10 rounded-sm"
         >
-          ЗАКРЫТЬ [✕]
+          <span>ЗАКРЫТЬ</span>
+          <span className="font-bold">✕</span>
         </button>
 
         {/* If Inspecting a Product */}
@@ -118,7 +119,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
 
                 <div className="pt-1">
                   <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-mono mb-1">
-                    ТЕХНОЛОГИЧЕСКИЙ РЕГЛАМЕНТ
+                    ПРИГОТОВЛЕНИЕ И СМЕШИВАНИЕ
                   </span>
                   <p className="text-xs text-[#382517]">{product.extractionMethod}</p>
                 </div>
@@ -139,7 +140,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
             {/* Laboratory Specifications Matrix */}
             <div className="border-t border-[#806345]/30 pt-4 mt-6">
               <span className="block text-[10px] tracking-[0.28em] text-[#806345] uppercase font-serif mb-3">
-                ПРОТОКОЛ ЛАБОРАТОРНЫХ ИСПЫТАНИЙ И СЕРТИФИКАЦИИ
+                ХАРАКТЕРИСТИКИ И СПЕЦИФИКАЦИЯ ФОРМУЛЫ
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-[11px] bg-[#DDD8C2]/30 p-3 border border-[#806345]/20">
                 {product.specifications.map((spec, i) => (
@@ -155,8 +156,8 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
 
             {/* Archival Authentication Seal */}
             <div className="mt-6 pt-4 border-t border-dashed border-[#806345]/30 flex items-center justify-between text-[10px] text-[#806345] font-serif">
-              <span>СТАНДАРТ: {product.provenance}</span>
-              <span>ГОСТ Р 58109-2018 · ЧЕСТНЫЙ ЗНАК · 18+</span>
+              <span>СЕРИЯ: {product.provenance}</span>
+              <span>30 МЛ · ФЛАКОН CHUBBY GORILLA V3 · 18+</span>
             </div>
           </div>
         )}

@@ -52,20 +52,20 @@ export const HeroSection: React.FC = () => {
         {/* Top Corners & Label Register Marks (in luminous ivory against dark top) */}
         <div className="flex justify-between items-start text-[7.5px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.24em] text-[#DDD8C2]/90 font-serif uppercase">
           <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="text-[#F5F3E9] font-bold">№ 024-LAB</span>
+            <span className="text-[#F5F3E9] font-bold">№ 024-CLEAN</span>
             <span className="hidden md:inline text-[#DDD8C2]/75">· ЖИДКОСТИ ДЛЯ ОЧИСТКИ КАРТРИДЖЕЙ ЭСДН</span>
           </div>
           <div className="text-right text-[#DDD8C2]/90">
-            <span className="hidden sm:inline text-[#DDD8C2]/75">МАРКИРОВКА «ЧЕСТНЫЙ ЗНАК» · </span>
-            <span className="text-[#F5F3E9] font-bold">ГОСТ Р 58109</span>
+            <span className="hidden sm:inline text-[#DDD8C2]/75">ФОРМАТ 30 МЛ · </span>
+            <span className="text-[#F5F3E9] font-bold">18+ ONLY</span>
           </div>
         </div>
 
         {/* Bottom Corners (in rich dark brown against light bottom) */}
         <div className="flex justify-between items-end text-[7.5px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.24em] text-[#806345] font-serif uppercase border-t border-[#806345]/15 pt-2">
           <div>
-            <span className="hidden sm:inline">ФАРМАКОПЕЙНЫЙ СТАНДАРТ </span>
-            <span className="font-semibold text-[#57391F]">USP / EP GRADE</span>
+            <span className="hidden sm:inline">БАЛАНС ОСНОВЫ </span>
+            <span className="font-semibold text-[#57391F]">50 PG / 50 VG</span>
           </div>
           <div className="text-right">
             <span className="hidden sm:inline">ФЛАКОНЫ CHUBBY GORILLA · </span>
@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
       {/* Top Archival Header Eyebrow */}
       <div className="w-full max-w-4xl mx-auto text-center pt-6 sm:pt-10 z-10 px-3">
         <p className="text-[9px] sm:text-xs tracking-[0.24em] sm:tracking-[0.3em] text-[#DDD8C2] font-serif uppercase leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-          МОЛОДАЯ НЕЗАВИСИМАЯ ЛАБОРАТОРИЯ ЖИДКОСТЕЙ ДЛЯ ОЧИСТКИ КАРТРИДЖЕЙ ЭСДН
+          СПЕЦИАЛИЗИРОВАННЫЕ ЖИДКОСТИ ДЛЯ ОЧИСТКИ КАРТРИДЖЕЙ ЭСДН
         </p>
       </div>
 
@@ -98,9 +98,9 @@ export const HeroSection: React.FC = () => {
           {/* Subtitle Typographic Block */}
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col items-center text-center px-2">
             <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-4 text-[9px] sm:text-xs tracking-[0.2em] sm:tracking-[0.26em] text-[#DDD8C2] font-serif uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              <span>ЛАБОРАТОРНАЯ ОЧИСТКА ЭСДН</span>
+              <span>ОЧИСТКА КАРТРИДЖЕЙ ЭСДН</span>
               <span className="text-[#A99A78] hidden xs:inline">/</span>
-              <span>СЫРЬЁ USP/EP</span>
+              <span>БАЗА 50/50</span>
               <span className="text-[#A99A78] hidden xs:inline">/</span>
               <span>УСТРАНЕНИЕ НАГАРА</span>
             </div>
@@ -110,22 +110,22 @@ export const HeroSection: React.FC = () => {
 
             {/* Archival Monograph Statement (Placed in the gentle transition zone) */}
             <p className="mt-4 sm:mt-5 text-xs sm:text-sm text-[#463020] font-serif italic max-w-xl tracking-wide leading-relaxed drop-shadow-[0_1px_0_rgba(255,255,255,0.4)]">
-              Специализированные очищающие жидкости для картриджей и испарительных элементов ЭСДН. Созданы на базе фармакопейных компонентов высокой очистки для деликатного растворения остаточного нагара, бережного ухода за хлопковым фитилем и сохранения первозданной чистоты передачи вкуса.
+              Специализированные очищающие жидкости для картриджей и испарительных элементов ЭСДН. Созданы на базе очищенных компонентов для деликатного растворения остаточного нагара, бережного ухода за хлопковым фитилем и сохранения чистоты передачи вкуса.
             </p>
           </div>
 
         </div>
       </div>
 
-      {/* Bottom Quiet Scroll Indicator - sits in the fully uniform #E8E5D2 zone */}
-      <div className="z-10 pb-3 sm:pb-4 text-center">
+      {/* Bottom Clear Navigation Button to Collection */}
+      <div className="z-10 pb-6 sm:pb-8 text-center px-4">
         <a
           href="#collection"
           id="scroll-to-collection"
-          className="group inline-flex flex-col items-center gap-1.5 sm:gap-2 text-[9px] tracking-[0.22em] sm:tracking-[0.26em] text-[#806345] hover:text-[#382517] uppercase font-serif transition-colors py-2"
+          className="group inline-flex items-center gap-3 text-xs sm:text-sm tracking-[0.18em] sm:tracking-[0.22em] text-[#F5F3E9] uppercase font-serif bg-[#382517] hover:bg-[#57391F] active:bg-[#22150D] border-2 border-[#806345] px-6 sm:px-8 py-3 sm:py-3.5 shadow-lg hover:shadow-xl transition-all duration-300 rounded-sm"
         >
-          <span className="font-semibold">ПОЗНАКОМИТЬСЯ С ЛИНЕЙКОЙ ОЧИСТКИ</span>
-          <div className="w-[1px] h-5 sm:h-6 bg-[#806345]/50 group-hover:h-7 sm:group-hover:h-8 group-hover:bg-[#57391F] transition-all duration-300"></div>
+          <span className="font-semibold">ПЕРЕЙТИ К ЛИНЕЙКЕ ОЧИСТКИ</span>
+          <span className="text-sm group-hover:translate-y-0.5 transition-transform">↓</span>
         </a>
       </div>
     </section>

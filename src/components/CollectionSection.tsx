@@ -19,7 +19,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
         {/* Section Masthead */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-24">
           <span className="text-[9px] sm:text-[10px] tracking-[0.26em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif block">
-            ЛАБОРАТОРНЫЕ СОСТАВЫ · СЕРИЯ CLEANSE-2024
+            СПЕЦИАЛИЗИРОВАННЫЕ СОСТАВЫ · СЕРИЯ CLEANSE
           </span>
           <h2
             className="text-2xl sm:text-4xl md:text-5xl font-serif text-[#382517] tracking-[0.06em] sm:tracking-[0.08em] mt-3 uppercase leading-tight"
@@ -29,7 +29,7 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
           </h2>
           <div className="w-16 h-[1px] bg-[#806345]/40 mx-auto mt-4 mb-4"></div>
           <p className="text-xs sm:text-base text-[#57391F]/80 font-serif italic max-w-lg mx-auto leading-relaxed">
-            Четыре специализированные формулы на фармакопейной базе USP/EP для промывки, удаления нагара и регенерации испарительных элементов картриджей ЭСДН.
+            Четыре специализированные формулы на чистой базе 50/50 PG/VG для промывки, удаления нагара и ухода за испарительными элементами картриджей ЭСДН.
           </p>
         </div>
 
@@ -128,14 +128,14 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
               </div>
             </div>
 
-            {/* Archival Action Button */}
+            {/* Action Button */}
             <button
               id="inspect-product-01"
               onClick={() => onSelectProduct(p1)}
-              className="group w-full sm:w-auto text-center justify-center inline-flex items-center gap-2.5 text-[11px] sm:text-xs tracking-[0.18em] sm:tracking-[0.22em] text-[#382517] uppercase font-serif border border-[#806345] px-4 sm:px-6 py-3 sm:py-3.5 hover:bg-[#57391F] hover:text-[#E8E5D2] active:bg-[#382517] active:text-[#E8E5D2] transition-colors duration-300 min-h-[46px]"
+              className="cursor-pointer group w-full sm:w-auto text-center justify-center inline-flex items-center gap-3 text-xs tracking-[0.18em] sm:tracking-[0.2em] text-[#F5F3E9] uppercase font-serif bg-[#382517] hover:bg-[#57391F] active:bg-[#22150D] border-2 border-[#806345] px-6 sm:px-7 py-3.5 shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px] rounded-sm"
             >
-              <span>ИЗУЧИТЬ ПАСПОРТ ОЧИЩАЮЩЕГО СОСТАВА</span>
-              <span className="text-xs group-hover:translate-x-1 transition-transform">→</span>
+              <span>ПОДРОБНЫЕ ХАРАКТЕРИСТИКИ</span>
+              <span className="text-sm font-bold group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
         </div>
@@ -219,14 +219,14 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
               </div>
             </div>
 
-            {/* Archival Action Button */}
+            {/* Action Button */}
             <button
               id="inspect-product-02"
               onClick={() => onSelectProduct(p2)}
-              className="group w-full sm:w-auto text-center justify-center inline-flex items-center gap-2.5 text-[11px] sm:text-xs tracking-[0.18em] sm:tracking-[0.22em] text-[#382517] uppercase font-serif border border-[#806345] px-4 sm:px-6 py-3 sm:py-3.5 hover:bg-[#57391F] hover:text-[#E8E5D2] active:bg-[#382517] active:text-[#E8E5D2] transition-colors duration-300 min-h-[46px]"
+              className="cursor-pointer group w-full sm:w-auto text-center justify-center inline-flex items-center gap-3 text-xs tracking-[0.18em] sm:tracking-[0.2em] text-[#F5F3E9] uppercase font-serif bg-[#382517] hover:bg-[#57391F] active:bg-[#22150D] border-2 border-[#806345] px-6 sm:px-7 py-3.5 shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px] rounded-sm"
             >
-              <span>ИЗУЧИТЬ ПАСПОРТ ОЧИЩАЮЩЕГО СОСТАВА</span>
-              <span className="text-xs group-hover:translate-x-1 transition-transform">→</span>
+              <span>ПОДРОБНЫЕ ХАРАКТЕРИСТИКИ</span>
+              <span className="text-sm font-bold group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
 
@@ -287,10 +287,10 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
             <button
               id="inspect-product-03"
               onClick={() => onSelectProduct(p3)}
-              className="w-full sm:w-auto text-center justify-center inline-flex items-center gap-2.5 text-[11px] sm:text-xs tracking-[0.18em] sm:tracking-[0.22em] text-[#382517] uppercase font-serif border border-[#806345] px-6 sm:px-8 py-3 sm:py-3.5 hover:bg-[#57391F] hover:text-[#E8E5D2] active:bg-[#382517] active:text-[#E8E5D2] transition-colors duration-300 min-h-[46px]"
+              className="cursor-pointer group w-full sm:w-auto text-center justify-center inline-flex items-center gap-3 text-xs tracking-[0.18em] sm:tracking-[0.2em] text-[#F5F3E9] uppercase font-serif bg-[#382517] hover:bg-[#57391F] active:bg-[#22150D] border-2 border-[#806345] px-6 sm:px-8 py-3.5 shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px] rounded-sm"
             >
-              <span>ИЗУЧИТЬ ПАСПОРТ ОЧИЩАЮЩЕГО СОСТАВА</span>
-              <span>→</span>
+              <span>ПОДРОБНЫЕ ХАРАКТЕРИСТИКИ</span>
+              <span className="text-sm font-bold group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
         </div>
@@ -334,28 +334,28 @@ export const CollectionSection: React.FC<CollectionSectionProps> = ({ onSelectPr
               {p4.description}
             </p>
 
-            {/* Archival Certificate Stamp simulation */}
+            {/* Spec Card */}
             <div className="border border-dashed border-[#806345]/40 p-3.5 sm:p-4 bg-[#E8E5D2]/60 mb-6 sm:mb-8 font-mono text-[11px] text-[#57391F]">
               <div className="flex justify-between border-b border-[#806345]/20 pb-1.5 mb-2 text-[#806345] text-[8.5px] sm:text-[9px] tracking-[0.18em] uppercase font-serif">
-                <span>ПАСПОРТ БЕЗОПАСНОСТИ</span>
-                <span>ПАРТИЯ № 024-TEA</span>
+                <span>СПЕЦИФИКАЦИЯ ФОРМУЛЫ</span>
+                <span>СЕРИЯ № 024-TEA</span>
               </div>
               <p className="italic font-serif text-xs text-[#57391F]/90 mb-2">
-                "Ультрачистая композиция для промывки картриджей ЭСДН. Растворяет нагар, продлевая ресурс хлопкового фитиля и сетки испарителя."
+                "Мягкая композиция для промывки картриджей ЭСДН. Растворяет нагар, продлевая ресурс хлопкового фитиля и сетки испарителя."
               </p>
               <div className="flex flex-col xs:flex-row justify-between text-[9.5px] sm:text-[10px] text-[#806345] gap-1">
-                <span>МАРКИРОВКА: ЧЕСТНЫЙ ЗНАК</span>
-                <span>СТАНДАРТ: ГОСТ Р 58109-2018</span>
+                <span>ФЛАКОН: 30 МЛ · CHUBBY GORILLA V3</span>
+                <span>БАЗА: 50 PG / 50 VG · 18+</span>
               </div>
             </div>
 
             <button
               id="inspect-product-04"
               onClick={() => onSelectProduct(p4)}
-              className="group w-full sm:w-auto text-center justify-center inline-flex items-center gap-2.5 text-[11px] sm:text-xs tracking-[0.18em] sm:tracking-[0.22em] text-[#382517] uppercase font-serif border border-[#806345] px-4 sm:px-6 py-3 sm:py-3.5 hover:bg-[#57391F] hover:text-[#E8E5D2] active:bg-[#382517] active:text-[#E8E5D2] transition-colors duration-300 min-h-[46px]"
+              className="cursor-pointer group w-full sm:w-auto text-center justify-center inline-flex items-center gap-3 text-xs tracking-[0.18em] sm:tracking-[0.2em] text-[#F5F3E9] uppercase font-serif bg-[#382517] hover:bg-[#57391F] active:bg-[#22150D] border-2 border-[#806345] px-6 sm:px-7 py-3.5 shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px] rounded-sm"
             >
-              <span>ИЗУЧИТЬ ПАСПОРТ ОЧИЩАЮЩЕГО СОСТАВА</span>
-              <span className="text-xs group-hover:translate-x-1 transition-transform">→</span>
+              <span>ПОДРОБНЫЕ ХАРАКТЕРИСТИКИ</span>
+              <span className="text-sm font-bold group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
         </div>

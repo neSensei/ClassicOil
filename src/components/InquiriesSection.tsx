@@ -1,19 +1,67 @@
 import React, { useState } from 'react';
 
+// ============================================================
+// 📧 НАСТРОЙКА ПОЧТЫ ДЛЯ ЗАЯВОК — ИЗМЕНИТЕ АДРЕС ЗДЕСЬ:
+// ============================================================
+// Все заявки с этой формы будут приходить на указанный email.
+// Отправка работает через бесплатный сервис FormSubmit —
+// свой сервер/бэкенд не нужен.
+//
+// ВАЖНО: после первой отправки формы на этот адрес придёт
+// письмо от FormSubmit с просьбой подтвердить активацию —
+// нужно один раз перейти по ссылке в этом письме, иначе
+// последующие заявки не будут доходить.
+const RECIPIENT_EMAIL = 'crazyfoxy03@gmail.com';
+// ============================================================
+
 export const InquiriesSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [ticketNumber] = useState(() => Math.floor(1000 + Math.random() * 9000));
   const [formData, setFormData] = useState({
     name: '',
     institution: '',
     email: '',
-    matter: 'Кураторство и пресса',
-    dispatch: ''
+    matter: 'Оптовые поставки',
+    dispatch: '',
+    _honey: '' // honeypot-поле от спам-ботов, должно оставаться пустым
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) return;
-    setSubmitted(true);
+    if (formData._honey) return; // сработал honeypot — тихо игнорируем бота
+
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          'Имя представителя': formData.name,
+          'Организация / вейп-шоп': formData.institution || '—',
+          'Email или Telegram': formData.email,
+          'Формат сотрудничества': formData.matter,
+          'Комментарий': formData.dispatch || '—',
+          _subject: `Новая заявка на опт/партнёрство — CO-B2B-${ticketNumber}`
+        })
+      });
+
+      if (!response.ok) throw new Error('Request failed');
+      setSubmitted(true);
+    } catch (err) {
+      setErrorMessage(
+        'Не удалось отправить заявку. Проверьте подключение к интернету и попробуйте ещё раз, либо напишите нам напрямую.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -59,7 +107,7 @@ export const InquiriesSection: React.FC = () => {
               </h3>
               <p className="text-xs sm:text-sm font-serif text-[#57391F] max-w-md mx-auto mb-6 leading-relaxed">
                 Ваша заявка зарегистрирована под номером CO-B2B-
-                {Math.floor(1000 + Math.random() * 9000)}. Менеджер коммерческого отдела свяжется с вами и направит оптовый презентационный буклет и условия сотрудничества.
+                {ticketNumber}. Менеджер коммерческого отдела свяжется с вами и направит оптовый презентационный буклет и условия сотрудничества.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
@@ -70,6 +118,17 @@ export const InquiriesSection: React.FC = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 text-[#57391F] font-serif">
+              {/* Honeypot: скрытое от людей поле, ловит спам-ботов */}
+              <input
+                type="text"
+                name="_honey"
+                value={formData._honey}
+                onChange={e => setFormData({ ...formData, _honey: e.target.value })}
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 
                 {/* Correspondent Name */}
@@ -169,17 +228,25 @@ export const InquiriesSection: React.FC = () => {
                 ></textarea>
               </div>
 
+              {/* Error message, if the request failed */}
+              {errorMessage && (
+                <p className="text-xs sm:text-sm text-red-800 font-serif bg-red-50 border border-red-200 px-3.5 py-2.5 -mt-1">
+                  {errorMessage}
+                </p>
+              )}
+
               {/* Submit Dispatch Slip */}
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-between border-t border-[#806345]/25 gap-4">
                 <span className="text-[10px] text-[#806345] font-serif italic text-center sm:text-left">
-                  Работаем исключительно с юридическими лицами и ИП по безналичному расчёту с маркировкой «Честный Знак». 18+
+                  Сотрудничество с вейп-шопами, сервисами и дистрибьюторами. Строго для совершеннолетних (18+).
                 </span>
                 <button
                   id="submit-dispatch-btn"
                   type="submit"
-                  className="w-full sm:w-auto text-xs tracking-[0.2em] sm:tracking-[0.22em] text-[#E8E5D2] bg-[#57391F] hover:bg-[#382517] active:bg-[#2c1d12] uppercase font-serif px-6 sm:px-8 py-3.5 sm:py-3 transition-colors duration-200 min-h-[48px] flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className="w-full sm:w-auto text-xs tracking-[0.2em] sm:tracking-[0.22em] text-[#E8E5D2] bg-[#57391F] hover:bg-[#382517] active:bg-[#2c1d12] disabled:opacity-60 disabled:cursor-not-allowed uppercase font-serif px-6 sm:px-8 py-3.5 sm:py-3 transition-colors duration-200 min-h-[48px] flex items-center justify-center"
                 >
-                  ОТПРАВИТЬ ЗАПРОС
+                  {isSubmitting ? 'ОТПРАВКА...' : 'ОТПРАВИТЬ ЗАПРОС'}
                 </button>
               </div>
 

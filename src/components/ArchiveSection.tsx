@@ -9,7 +9,7 @@ interface ArchiveSectionProps {
 export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveItem }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Все');
 
-  const categories = ['Все', 'Чистая зона', 'Сырьё USP/EP', 'Флейвористика', 'Контроль GC/MS', 'Честный Знак', 'Флакон и дозатор'];
+  const categories = ['Все', 'База PG/VG', 'Сырьё и чистота', 'Флейвористика', 'Защита койлов', 'Упаковка'];
 
   const filteredEntries = selectedCategory === 'Все'
     ? ARCHIVE_ENTRIES
@@ -23,7 +23,7 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#806345]/30 pb-6 sm:pb-8 mb-8 sm:mb-12">
           <div>
             <div className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] uppercase font-serif mb-2">
-              ТЕХНОЛОГИЧЕСКИЙ РЕГЛАМЕНТ · ЛАБОРАТОРНЫЙ СТАНДАРТ
+              ПРИНЦИПЫ СОЗДАНИЯ И ТЕХНОЛОГИЯ
             </div>
             <h2
               className="text-3xl sm:text-5xl md:text-6xl font-serif text-[#382517] tracking-[0.06em] uppercase"
@@ -34,23 +34,23 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
           </div>
 
           <div className="mt-4 md:mt-0 max-w-md text-xs sm:text-sm text-[#57391F]/80 font-serif italic leading-relaxed">
-            Чистые помещения класса ISO 7, сырьё фармакопейной чистоты USP/EP, газохроматографический скрининг и государственная маркировка «Честный Знак».
+            Качественные компоненты, выверенный баланс основы PG/VG, деликатный уход за испарителем и оригинальные флаконы Chubby Gorilla.
           </div>
         </div>
 
-        {/* Category Filters (Mobile-friendly horizontal scroll) */}
+        {/* Category Filters (Clear, clickable filter buttons) */}
         <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-12 pb-2">
-          <span className="hidden sm:inline-block text-[10px] tracking-[0.2em] text-[#806345] uppercase font-mono mr-2 whitespace-nowrap">
-            РАЗДЕЛЫ СТАНДАРТА:
+          <span className="hidden sm:inline-block text-[11px] tracking-[0.2em] text-[#57391F] uppercase font-mono mr-2 whitespace-nowrap font-semibold">
+            РАЗДЕЛЫ:
           </span>
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`whitespace-nowrap text-xs tracking-[0.14em] sm:tracking-[0.16em] font-serif uppercase px-3 sm:px-3.5 py-1.5 sm:py-1 transition-all min-h-[38px] flex items-center ${
+              className={`cursor-pointer whitespace-nowrap text-xs tracking-[0.14em] sm:tracking-[0.16em] font-serif uppercase px-4 py-2 transition-all min-h-[40px] flex items-center rounded-sm border shadow-sm ${
                 selectedCategory === cat
-                  ? 'bg-[#57391F] text-[#E8E5D2]'
-                  : 'bg-[#E8E5D2]/60 text-[#806345] border border-[#806345]/30 hover:border-[#57391F] hover:text-[#382517]'
+                  ? 'bg-[#382517] text-[#F5F3E9] border-[#22150D] font-bold shadow-inner'
+                  : 'bg-[#DDD8C2]/80 text-[#57391F] border-[#806345]/50 hover:bg-[#57391F] hover:text-[#FFFFFF] hover:border-[#382517]'
               }`}
             >
               {cat}
@@ -111,10 +111,10 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
         <div className="mt-16 border-t border-b border-[#806345]/25 py-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#806345] font-serif gap-4">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#806345]"></span>
-            <span className="tracking-[0.15em] uppercase">ЛАБОРАТОРНЫЙ КОМПЛЕКС И КОНТРОЛЬ КАЧЕСТВА</span>
+            <span className="tracking-[0.15em] uppercase">CLASSIC OIL · ОРИГИНАЛЬНАЯ РЕЦЕПТУРА</span>
           </div>
           <span className="italic text-center sm:text-right">
-            Вся продукция декларирована по стандарту ГОСТ Р 58109-2018 и оснащена цифровым криптографическим кодом DataMatrix («Честный Знак»).
+            Флаконы Chubby Gorilla 30 мл с контролем первого вскрытия и защитой от детей. Только для лиц старше 18 лет.
           </span>
         </div>
 

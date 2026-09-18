@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
 
         {/* Top Fine Border Label Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between border-b border-[#806345]/25 pb-3 sm:pb-4 mb-6 sm:mb-8 text-[8px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.25em] text-[#806345] font-serif uppercase text-center gap-1.5">
-          <span>КОНТРЭТИКЕТКА СО СПЕЦИФИКАЦИЕЙ</span>
-          <span className="hidden sm:inline">ГОСТ Р 58109-2018 · ЧЕСТНЫЙ ЗНАК</span>
+          <span>ИНФОРМАЦИОННАЯ ЭТИКЕТКА</span>
+          <span className="hidden sm:inline">ФОРМУЛА 50 PG / 50 VG · 30 МЛ</span>
           <span>18+ СОВЕРШЕННОЛЕТНИМ</span>
         </div>
 
@@ -34,24 +34,25 @@ export const Footer: React.FC = () => {
         {/* Extremely Small Editorial Text (Reverse Label Prose) */}
         <div className="max-w-xl mx-auto text-center space-y-3 text-[9.5px] sm:text-[11px] font-serif text-[#57391F]/80 leading-relaxed px-1">
           <p>
-            CLASSIC OIL — официальный российский бренд специализированных жидкостей для очистки картриджей ЭСДН и испарительных элементов POD-систем. Изготавливается в сертифицированных чистых помещениях класса ISO 7 на базе фармакопейного сырья USP/EP (Glaconchemie, Германия; DOW, США). Формула эффективно удаляет углеродистый нагар, не содержит агрессивных кислот и продлевает ресурс картриджей ЭСДН.
+            CLASSIC OIL — бренд специализированных жидкостей для ухода и очистки картриджей ЭСДН и испарительных элементов POD-систем. Сбалансированный состав на основе очищенного пропиленгликоля и глицерина мягко растворяет остаточный нагар, не повреждая фитиль, и сохраняет чистоту вкусопередачи.
           </p>
           <p className="text-[9px] sm:text-[10px] tracking-wider text-[#806345] uppercase font-serif">
-            НАЗНАЧЕНИЕ: ОЧИСТКА КАРТРИДЖЕЙ ЭСДН · СЕРТИФИЦИРОВАНО ПО ГОСТ Р 58109-2018
+            НАЗНАЧЕНИЕ: ОЧИСТКА КАРТРИДЖЕЙ ЭСДН · ФЛАКОН CHUBBY GORILLA V3
           </p>
           <p className="text-[8.5px] sm:text-[9px] tracking-[0.18em] text-[#806345] uppercase font-mono">
-            РОССИЙСКАЯ ФЕДЕРАЦИЯ · ЛАБОРАТОРИЯ CLASSIC OIL LAB
+            РОССИЙСКАЯ ФЕДЕРАЦИЯ · CLASSIC OIL
           </p>
         </div>
 
-        {/* Back to Top Restrained Action */}
+        {/* Back to Top Action */}
         <div className="mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-[#806345]/25 flex flex-col sm:flex-row items-center justify-between text-[8.5px] sm:text-[9px] tracking-[0.2em] text-[#806345] font-serif uppercase gap-3 text-center">
-          <span>© 2024 CLASSIC OIL LAB · ПРЕЗЕНТАЦИЯ БРЕНДА · 18+</span>
+          <span>© 2024 CLASSIC OIL · ПРЕЗЕНТАЦИЯ ПРОДУКЦИИ · 18+</span>
           <button
             onClick={scrollToTop}
-            className="hover:text-[#382517] transition-colors border-b border-transparent hover:border-[#57391F] py-1 min-h-[36px] flex items-center"
+            className="cursor-pointer inline-flex items-center gap-2 px-3.5 py-1.5 border border-[#806345] bg-[#DDD8C2]/60 text-[#382517] hover:bg-[#57391F] hover:text-[#F5F3E9] transition-all rounded-sm min-h-[36px]"
           >
-            В НАЧАЛО СТРАНИЦЫ ↑
+            <span>В НАЧАЛО СТРАНИЦЫ</span>
+            <span>↑</span>
           </button>
         </div>
 

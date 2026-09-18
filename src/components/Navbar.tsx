@@ -45,8 +45,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           <Wordmark size="nav" inverse={true} />
         </a>
 
-        {/* Desktop Navigation Links (Concise, high-contrast) */}
-        <nav className="hidden md:flex items-center gap-7 lg:gap-10 text-xs tracking-[0.22em] font-serif uppercase">
+        {/* Desktop Navigation Links (Clear, distinct clickable button tabs) */}
+        <nav className="hidden md:flex items-center gap-2 lg:gap-3 text-xs tracking-[0.16em] lg:tracking-[0.18em] font-serif uppercase">
           {navLinks.map(link => {
             const sectionKey = link.href.replace('#', '');
             const isActive = activeSection === sectionKey;
@@ -55,22 +55,23 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 key={link.id}
                 href={link.href}
                 id={link.id}
-                className={`transition-all duration-200 relative pb-1 ${
+                className={`cursor-pointer inline-flex items-center gap-2 px-3.5 lg:px-4 py-2 rounded-sm border transition-all duration-200 text-xs ${
                   isActive
-                    ? 'text-[#F5F3E9] font-bold border-b-2 border-[#E8E5D2]'
-                    : 'text-[#DDD8C2]/75 hover:text-[#FFFFFF] hover:border-b-2 hover:border-[#806345]'
+                    ? 'bg-[#57391F] border-[#E8E5D2] text-[#FFFFFF] font-semibold shadow-inner'
+                    : 'bg-[#22150D]/90 border-[#806345]/50 text-[#DDD8C2] hover:bg-[#57391F] hover:text-[#FFFFFF] hover:border-[#E8E5D2]/70'
                 }`}
               >
-                {link.label}
+                <span className={`text-[9px] font-mono ${isActive ? 'text-[#E8E5D2]' : 'text-[#806345]'}`}>{link.num}</span>
+                <span>{link.label}</span>
               </a>
             );
           })}
         </nav>
 
-        {/* Desktop 18+ & Честный Знак (Compact Badge) */}
-        <div className="hidden lg:flex items-center gap-2.5 text-[9.5px] tracking-[0.2em] text-[#DDD8C2] font-mono border border-[#806345]/60 bg-[#22150D] px-3 py-1">
-          <span className="font-bold text-[#F5F3E9] border-r border-[#806345]/50 pr-2.5">18+</span>
-          <span>ЧЕСТНЫЙ ЗНАК</span>
+        {/* Desktop 18+ Badge */}
+        <div className="hidden lg:flex items-center gap-2 text-[9.5px] tracking-[0.2em] text-[#DDD8C2] font-mono border border-[#806345]/60 bg-[#22150D] px-3 py-1">
+          <span className="font-bold text-[#F5F3E9]">18+</span>
+          <span className="text-[#DDD8C2]/70">ТОЛЬКО ДЛЯ СОВЕРШЕННОЛЕТНИХ</span>
         </div>
 
         {/* Mobile Menu Toggle Button */}
@@ -96,7 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         >
           <div className="flex items-center justify-between text-[9px] tracking-[0.25em] text-[#DDD8C2]/60 font-mono uppercase border-b border-[#806345]/30 pb-2 mb-3">
             <span>РЕЕСТР РАЗДЕЛОВ</span>
-            <span className="text-[#DDD8C2]/80">№ 024-LAB</span>
+            <span className="text-[#DDD8C2]/80">CLASSIC OIL</span>
           </div>
 
           <nav className="flex flex-col space-y-1">
@@ -125,8 +126,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           </nav>
 
           <div className="pt-4 border-t border-[#806345]/30 flex items-center justify-between text-[9px] tracking-[0.18em] text-[#DDD8C2]/70 font-mono uppercase">
-            <span className="font-bold text-[#F5F3E9]">18+ · ГОСТ Р 58109</span>
-            <span>ЧЕСТНЫЙ ЗНАК</span>
+            <span className="font-bold text-[#F5F3E9]">18+ ТОЛЬКО</span>
+            <span>ДЛЯ СОВЕРШЕННОЛЕТНИХ</span>
           </div>
         </div>
       )}
