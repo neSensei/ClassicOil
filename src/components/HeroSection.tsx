@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
 
           <div className="text-right text-[#DDD8C2]/90">
             <span className="hidden sm:inline text-[#DDD8C2]/75">
-              ФОРМАТ 30 МЛ ·{' '}
+              ФОРМАТ 28 МЛ ·{' '}
             </span>
 
             <span className="text-[#F5F3E9] font-bold">
@@ -93,7 +93,7 @@ export const HeroSection: React.FC = () => {
             </span>
 
             <span className="font-semibold text-[#57391F]">
-              30 МЛ (V3)
+              28 МЛ (V3)
             </span>
           </div>
         </div>

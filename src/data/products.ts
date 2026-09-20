@@ -20,7 +20,7 @@ const flavorImage = (slug: string, small = false): string => {
 };
 
 const VESSEL =
-  'Флакон 30 мл Chubby Gorilla V3 с контролем первого вскрытия и защитой от вскрытия детьми';
+  'Флакон 28 мл Chubby Gorilla V3 с контролем первого вскрытия и защитой от вскрытия детьми';
 const FORMULATION = 'РЕЦЕПТУРА: СЕРИЯ CLEANSE // 2024';
 
 type Flavor = {
@@ -298,7 +298,7 @@ export const PRODUCTS: Product[] = FLAVORS.map((f, i) => {
       { label: 'Вкус', value: f.taste },
       { label: 'Баланс основы', value: '50% PG / 50% VG' },
       { label: 'Флакон', value: 'Chubby Gorilla V3' },
-      { label: 'Объём', value: '30 мл' },
+      { label: 'Объём', value: '28 мл' },
       { label: 'Ограничение', value: 'Только 18+' },
     ],
   };

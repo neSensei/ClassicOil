@@ -114,7 +114,7 @@ export const ArchiveSection: React.FC<ArchiveSectionProps> = ({ onSelectArchiveI
             <span className="tracking-[0.15em] uppercase">CLASSIC OIL · ОРИГИНАЛЬНАЯ РЕЦЕПТУРА</span>
           </div>
           <span className="italic text-center sm:text-right">
-            Флаконы Chubby Gorilla 30 мл с контролем первого вскрытия и защитой от детей. Только для лиц старше 18 лет.
+            Флаконы Chubby Gorilla 28 мл с контролем первого вскрытия и защитой от детей. Только для лиц старше 18 лет.
           </span>
         </div>
 

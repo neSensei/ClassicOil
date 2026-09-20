@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
         {/* Top Fine Border Label Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between border-b border-[#806345]/25 pb-3 sm:pb-4 mb-6 sm:mb-8 text-[10px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-[#806345] font-serif uppercase text-center gap-1.5">
           <span>ИНФОРМАЦИОННАЯ ЭТИКЕТКА</span>
-          <span className="hidden sm:inline">ФОРМУЛА 50 PG / 50 VG · 30 МЛ</span>
+          <span className="hidden sm:inline">ФОРМУЛА 50 PG / 50 VG · 28 МЛ</span>
           <span>18+ СОВЕРШЕННОЛЕТНИМ</span>
         </div>
 

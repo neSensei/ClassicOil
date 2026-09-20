@@ -134,7 +134,7 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
             {/* Archival Authentication Seal */}
             <div className="mt-6 pt-4 border-t border-dashed border-[#806345]/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] text-[#806345] font-serif">
               <span>{product.provenance} · {product.formulationYear}</span>
-              <span>30 МЛ · ФЛАКОН CHUBBY GORILLA V3 · 18+</span>
+              <span>28 МЛ · ФЛАКОН CHUBBY GORILLA V3 · 18+</span>
             </div>
           </div>
         )}
