@@ -45,10 +45,9 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
         {product && (
           <div>
             {/* Header / Registry Block */}
-            <div className="border-b border-[#806345]/30 pb-3 sm:pb-4 mb-5 sm:mb-6">
-              <div className="flex items-center justify-between text-[10px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] font-mono uppercase mb-1">
-                <span>{product.plate}</span>
-                <span>{product.formulationYear}</span>
+            <div className="border-b border-[#806345]/30 pb-3 sm:pb-4 mb-5 sm:mb-6 sm:pr-28">
+              <div className="text-[10px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] text-[#806345] font-mono uppercase mb-1">
+                {product.plate}
               </div>
               <h3
                 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#382517] tracking-[0.04em] sm:tracking-[0.05em] uppercase leading-tight"
@@ -61,86 +60,64 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
               </p>
             </div>
 
-            {/* Content Columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start mb-6">
-              <div className="sm:col-span-5 border border-[#806345]/30 p-2 bg-[#DDD8C2]/40">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-auto object-cover grayscale-[10%]"
-                />
-                <div className="mt-2 text-center text-[10px] tracking-[0.2em] text-[#806345] font-serif uppercase">
-                  {product.vessel}
-                </div>
+            {/* Photo (landscape) */}
+            <div className="border border-[#806345]/30 p-2 bg-[#DDD8C2]/40 mb-6">
+              <img
+                src={product.image}
+                alt={`Classic Oil ${product.name} — ${product.classification.toLowerCase()}`}
+                width={1257}
+                height={832}
+                referrerPolicy="no-referrer"
+                className="w-full h-auto object-cover grayscale-[10%]"
+              />
+              <div className="mt-2 text-center text-[10px] tracking-[0.2em] text-[#806345] font-serif uppercase">
+                {product.vessel}
               </div>
+            </div>
 
-              <div className="sm:col-span-7 space-y-4 text-xs sm:text-sm font-serif text-[#57391F] leading-relaxed">
-                <p>{product.description}</p>
-                <p className="text-[#806345] italic">{product.secondaryText}</p>
+            {/* Description */}
+            <div className="space-y-4 text-sm sm:text-base font-serif text-[#57391F] leading-relaxed mb-6">
+              <p>{product.description}</p>
+              <p className="text-[#806345] italic text-sm">{product.secondaryText}</p>
+            </div>
 
-                {/* Taste Profile Pyramid */}
-                {product.tasteProfile && (
-                  <div className="p-3 bg-[#DDD8C2]/40 border border-[#806345]/30 space-y-2">
-                    <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-mono border-b border-[#806345]/20 pb-1">
-                      ПИРАМИДА ВКУСА И БАЛАНС
-                    </span>
-                    <div className="text-xs space-y-1">
-                      <div>
-                        <span className="text-[#806345] font-mono text-[10px] uppercase block">Верхние ноты (при вдохе):</span>
-                        <span className="text-[#382517] font-serif font-medium">{product.tasteProfile.topNotes}</span>
-                      </div>
-                      <div>
-                        <span className="text-[#806345] font-mono text-[10px] uppercase block">Ноты сердца (на выдохе):</span>
-                        <span className="text-[#382517] font-serif font-medium">{product.tasteProfile.heartNotes}</span>
-                      </div>
-                      <div>
-                        <span className="text-[#806345] font-mono text-[10px] uppercase block">Базовые ноты и послевкусие:</span>
-                        <span className="text-[#382517] font-serif font-medium">{product.tasteProfile.baseNotes}</span>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#806345]/20 text-[10px]">
-                      <div>
-                        <span className="text-[#806345] block">СЛАДОСТЬ</span>
-                        <span className="font-mono text-[#382517] font-bold">{product.tasteProfile.sweetness} / 10</span>
-                      </div>
-                      <div>
-                        <span className="text-[#806345] block">ХОЛОДОК</span>
-                        <span className="font-mono text-[#382517] font-bold">{product.tasteProfile.coolness} / 10</span>
-                      </div>
-                      <div>
-                        <span className="text-[#806345] block">НАСЫЩЕННОСТЬ</span>
-                        <span className="font-mono text-[#382517] font-bold">{product.tasteProfile.saturation} / 10</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                <div className="pt-1">
-                  <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-mono mb-1">
-                    ПРИГОТОВЛЕНИЕ И СМЕШИВАНИЕ
-                  </span>
-                  <p className="text-xs text-[#382517]">{product.extractionMethod}</p>
-                </div>
-
+            {/* Taste Pyramid */}
+            <div className="p-3 sm:p-4 bg-[#DDD8C2]/40 border border-[#806345]/30 mb-6">
+              <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-mono border-b border-[#806345]/20 pb-1 mb-3">
+                ПИРАМИДА ВКУСА
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs">
                 <div>
-                  <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-mono mb-1">
-                    АРХИТЕКТУРА АРОМАТИЧЕСКИХ КОМПОНЕНТОВ
-                  </span>
-                  <ul className="list-disc list-inside text-xs text-[#57391F] space-y-0.5">
-                    {product.botanicalOrigins.map((bot, i) => (
-                      <li key={i} className="italic">{bot}</li>
-                    ))}
-                  </ul>
+                  <span className="text-[#806345] font-mono text-[10px] uppercase block mb-0.5">Верхние ноты (при вдохе)</span>
+                  <span className="text-[#382517] font-serif font-medium">{product.tasteProfile.topNotes}</span>
+                </div>
+                <div>
+                  <span className="text-[#806345] font-mono text-[10px] uppercase block mb-0.5">Ноты сердца (на выдохе)</span>
+                  <span className="text-[#382517] font-serif font-medium">{product.tasteProfile.heartNotes}</span>
+                </div>
+                <div>
+                  <span className="text-[#806345] font-mono text-[10px] uppercase block mb-0.5">Базовые ноты и послевкусие</span>
+                  <span className="text-[#382517] font-serif font-medium">{product.tasteProfile.baseNotes}</span>
                 </div>
               </div>
             </div>
 
-            {/* Laboratory Specifications Matrix */}
+            {/* Flavor components */}
+            <div className="mb-2">
+              <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-mono mb-1">
+                ВКУСОВЫЕ КОМПОНЕНТЫ
+              </span>
+              <ul className="list-disc list-inside text-xs text-[#57391F] space-y-0.5">
+                {product.flavorComponents.map((item, i) => (
+                  <li key={i} className="italic">{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Specifications Matrix */}
             <div className="border-t border-[#806345]/30 pt-4 mt-6">
               <span className="block text-[10px] tracking-[0.28em] text-[#806345] uppercase font-serif mb-3">
-                ХАРАКТЕРИСТИКИ И СПЕЦИФИКАЦИЯ ФОРМУЛЫ
+                ХАРАКТЕРИСТИКИ
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-[11px] bg-[#DDD8C2]/30 p-3 border border-[#806345]/20">
                 {product.specifications.map((spec, i) => (
@@ -155,8 +132,8 @@ export const ArchivalModal: React.FC<ArchivalModalProps> = ({
             </div>
 
             {/* Archival Authentication Seal */}
-            <div className="mt-6 pt-4 border-t border-dashed border-[#806345]/30 flex items-center justify-between text-[10px] text-[#806345] font-serif">
-              <span>СЕРИЯ: {product.provenance}</span>
+            <div className="mt-6 pt-4 border-t border-dashed border-[#806345]/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] text-[#806345] font-serif">
+              <span>{product.provenance} · {product.formulationYear}</span>
               <span>30 МЛ · ФЛАКОН CHUBBY GORILLA V3 · 18+</span>
             </div>
           </div>

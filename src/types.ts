@@ -1,10 +1,7 @@
 export interface TasteProfile {
-  topNotes: string;
-  heartNotes: string;
-  baseNotes: string;
-  sweetness: number; // 1-10
-  coolness: number;  // 1-10
-  saturation: number; // 1-10
+  topNotes: string;   // первое впечатление
+  heartNotes: string; // середина вкуса
+  baseNotes: string;  // послевкусие
 }
 
 export interface Product {
@@ -16,16 +13,12 @@ export interface Product {
   description: string;
   secondaryText: string;
   vessel: string;
-  volume: string;
   formulationYear: string;
-  strength: string;
-  ratio: string;
   tasteProfile: TasteProfile;
-  botanicalOrigins: string[];
-  extractionMethod: string;
-  viscosityGrade: string;
+  flavorComponents: string[];
   provenance: string;
-  image: string;
+  image: string;      // полноразмерное фото (окно с деталями)
+  imageSmall: string; // уменьшенная копия для карточки в каталоге
   specifications: {
     label: string;
     value: string;
