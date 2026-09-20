@@ -1,5 +1,7 @@
 import React from 'react';
 import { Wordmark } from './Wordmark';
+import certificateFile from '../assets/certificate/classic-oil-certificate.png';
+import certificatePreview from '../assets/certificate/classic-oil-certificate-thumb.webp';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -56,6 +58,50 @@ export const Footer: React.FC = () => {
           </button>
         </div>
 
+      </div>
+
+      {/* Certificate scan (downloadable) — last block on the page */}
+      <div className="max-w-4xl mx-auto mt-5 sm:mt-6 border border-[#806345]/40 p-4 sm:p-6 bg-[#E8E5D2] flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+        <a
+          href={certificateFile}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Открыть скан сертификата соответствия в новой вкладке"
+          className="shrink-0 block border border-[#806345]/30 p-1.5 bg-[#DDD8C2]/40 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src={certificatePreview}
+            alt="Сертификат соответствия на жидкость для очистки картриджей ЭСДН (уменьшенное превью)"
+            width={420}
+            height={594}
+            loading="lazy"
+            decoding="async"
+            className="w-24 sm:w-28 h-auto"
+          />
+        </a>
+
+        <div className="text-center sm:text-left">
+          <span className="block text-[10px] tracking-[0.25em] text-[#806345] uppercase font-serif mb-1">
+            ДОКУМЕНТЫ
+          </span>
+          <h3
+            className="text-lg sm:text-xl font-serif text-[#382517] tracking-[0.04em] uppercase"
+            style={{ fontFamily: '"Bodoni Moda", serif' }}
+          >
+            Сертификат соответствия
+          </h3>
+          <p className="mt-1 text-[11px] sm:text-xs text-[#57391F]/80 font-serif italic leading-relaxed">
+            Скан сертификата на жидкость для очистки картриджей ЭСДН · PNG, 3,4 МБ
+          </p>
+          <a
+            href={certificateFile}
+            download="classic-oil-certificate.png"
+            className="cursor-pointer mt-4 inline-flex items-center justify-center gap-3 text-xs tracking-[0.18em] sm:tracking-[0.2em] text-[#F5F3E9] uppercase font-serif bg-[#382517] hover:bg-[#57391F] active:bg-[#22150D] border-2 border-[#806345] px-6 py-3 shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px] rounded-sm"
+          >
+            <span>СКАЧАТЬ СКАН</span>
+            <span className="text-sm font-bold">↓</span>
+          </a>
+        </div>
       </div>
     </footer>
   );
